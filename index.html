@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title -->
+    <title>WeathrXpert</title>
+
+    <!-- Important Links -->
+    <link rel="icon" href="./img/cloud.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+  </head>
+
+  <body>
+    <!-- Navbar Of Page -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a style="font-weight:400;" class="navbar-brand" href="/index.html" >WeathrXpert</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Delhi"
+              id="search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" id="submit" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Body Of Page -->
+    <div class="container">
+      <h1 class="my4 text-center mb-3" style="font-size:30px; ">
+        Location: <span id="cityName"></span>
+      </h1>
+      <main>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          <div class="col">
+            <div class="card text-bg-danger mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Temprature</h4>
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Temprature :<span id="temp"></span>°C</li>
+                  <li>Min Temprature :<span id="min_temp"></span>°C</li>
+                  <li>Max Temprature :<span id="max_temp"></span>°C</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-bg-warning mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Cloud</h4>
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Cloud Pct :<span id="cloud_pct"></span></li>
+                  <li>Feels like :<span id="feels_like"></span></li>
+                  <li>Humidity :<span id="humidity"></span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-bg-info mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Wind</h4>
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Wind Speed : <span id="wind_speed"></span></li>
+                  <li>Sunset :<span id="sunset"></span></li>
+                  <li>Sunrise :<span id="sunrise"></span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 style="font-size: 30px;" class="display-6 text-center mb-4">Detailed Info</h2>
+        <hr style="margin:-2px" />
+        <div class="table-responsive">
+          <table class="table text-center">
+            <tbody>
+              <tr>
+                <th scope="row" class="text-start" id="tableval1">Cloud pct</th>
+                <td id="dCloudPct"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start" id="tableval2">Feels like</th>
+                <td id="dFeelsLike"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start" id="tableval3">Humidity</th>
+                <td id="dHumidity"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start" id="tableval4">Maximum Temprature</th>
+                <td id="dMaxTemp"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start" id="tableval4">Minimum Temprature</th>
+                <td id="dMinTemp"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start" id="tableval4">Sunrise</th>
+                <td id="dSunrise"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start" id="tableval4">Sunset</th>
+                <td id="dSunset"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start" id="tableval4">Temprature</th>
+
+                <td id="dTemp"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start" id="tableval4">Wind Degrees</th>
+                <td id="dWindDegrees"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start" id="tableval4">Wind Speed</th>
+                <td id="dWindSpeed"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+    <hr style=" margin:6px;">
+
+    <!-- Footer Of Page -->
+    <footer>
+      <div style="display: flex; justify-content: center;"><h2 id="footer" style="font-size: 18px;" > All Rights Reserved &copy; 2023| WeathrXpert</h2></div>
+    </footer>
+
+    <!-- Script Tags -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
