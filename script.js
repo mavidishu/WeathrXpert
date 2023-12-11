@@ -1,3 +1,4 @@
+// Required Variables
 const options = {
 	method: "GET",
 	headers: {
@@ -5,6 +6,10 @@ const options = {
 	},
 };
 
+submit = document.getElementById("submit");
+city = document.getElementById("search");
+
+// Fetching API
 const getweather = (city) => {
 	cityName.innerHTML = city;
 	console.log(typeof city);
@@ -42,8 +47,6 @@ const getweather = (city) => {
 		});
 };
 
-submit = document.getElementById("submit");
-city = document.getElementById("search");
 submit.addEventListener("click", (e) => {
 	cityVal = city.value;
 	e.preventDefault();
