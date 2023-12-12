@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# WeathrXpert
-=======
 # WeathrXpert Web Application
 
 Welcome to WeathrXpert, a dynamic web application that provides real-time weather information based on user-specified locations. This project is built using HTML, CSS, and JavaScript, with styling enhancements from the Bootstrap framework.
@@ -43,4 +40,3 @@ Welcome to WeathrXpert, a dynamic web application that provides real-time weathe
 ## Dependencies
 - Bootstrap 5.3.0-alpha1: Bootstrap CDN
 - Bootstrap JavaScript (Popper.js and Bootstrap Bundle): Bootstrap CDN
->>>>>>> 7208c76a2a1a93a4d3c08c9dd3245edd3d86beb1
