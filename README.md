@@ -37,6 +37,9 @@ Welcome to WeathrXpert, a dynamic web application that provides real-time weathe
    
 - Open the index.html file in your preferred web browser.
 - Explore the application, enter a city name in the search bar, and discover real-time weather information.
+## View WeatherXprt
+![Website SS](https://github.com/mavidishu/WeathrXpert/blob/main/assets/webSs.png)
+
 ## Dependencies
 - Bootstrap 5.3.0-alpha1: Bootstrap CDN
 - Bootstrap JavaScript (Popper.js and Bootstrap Bundle): Bootstrap CDN
