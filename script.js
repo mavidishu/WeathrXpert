@@ -2,7 +2,7 @@
 const options = {
 	method: "GET",
 	headers: {
-		"X-Api-Key": "c5agaIOJUqErLvd3uFGBeA==HJZskbBRQqIMLixA",
+		"X-Api-Key": "",//your-api-key-here
 	},
 };
 
@@ -91,7 +91,7 @@ async function getLocationName(lat, lon) {
 		const response = await axios.get(baseUrl, {
 			params: {
 				q: `${lat}+${lon}`,
-                key: "40970598aafc483db2f1be98980feaec"
+                key: "" //your-api-key-here
             }
         });
         const locationData = response.data;
